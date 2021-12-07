@@ -596,8 +596,9 @@ public class BasicFlow {
     	dump+=FormatUtils.ip(dst)+",";    			
     	dump+=getDstPort()+",";
     	dump+=getProtocol()+",";
-		//dump+=this.flowStartTime+",";
-    	dump+=DateFormatter.parseDateFromLong(this.flowStartTime/1000L, "dd/MM/yyyy hh:mm:ss")+",";
+		dump+=this.flowStartTime+","; // flow start time in microseconds
+		dump+=this.flowLastSeen+",";  // flow end time in microseconds
+    	//dump+=DateFormatter.parseDateFromLong(this.flowStartTime/1000L, "dd/MM/yyyy hh:mm:ss")+",";
     	long flowDuration = this.flowLastSeen - this.flowStartTime; 
     	dump+=flowDuration+",";
 		dump+=this.fwdPktStats.getN()+",";
@@ -1098,8 +1099,10 @@ public class BasicFlow {
     	dump.append(getDstPort()).append(separator);          						//5
     	dump.append(getProtocol()).append(separator);         						//6 
     	
-    	String starttime = DateFormatter.convertMilliseconds2String(flowStartTime/1000L, "dd/MM/yyyy hh:mm:ss a");
-    	dump.append(starttime).append(separator);									//7
+    	//String starttime = DateFormatter.convertMilliseconds2String(flowStartTime/1000L, "dd/MM/yyyy hh:mm:ss a");
+    	//dump.append(starttime).append(separator);									//7
+		dump.append(flowStartTime).append(separator); 								//7
+		dump.append(Long.toString(flowLastSeen)).append(separator);					// new feature 'flow end time'
     	
     	long flowDuration = flowLastSeen - flowStartTime;
     	dump.append(flowDuration).append(separator);								//8

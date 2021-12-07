@@ -16,7 +16,9 @@ public enum FlowFeature {
     dst_ip("Dst IP","DIP",false),				//4
     dst_pot("Dst Port","DPT"),					//5
     prot("Protocol","PROT"),					//6
-    tstp("Timestamp","TSTP",false),				//7
+    //tstp("Timestamp","TSTP",false),			//7
+    fst("Flow Start Time","FST",false),			//7 RENAMED TO 'FLOW START TIME'
+    fet("Flow End Time","FET",false), 			// NEW FEATURE 'FLOW END TIME'
     fl_dur("Flow Duration","DUR"),				//8
     tot_fw_pkt("Total Fwd Packet","TFwP"),			//9
     tot_bw_pkt("Total Bwd packets","TBwP"),			//10
