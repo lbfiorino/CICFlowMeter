@@ -5,5 +5,5 @@
 - Feature 'Flow End Time' in microseconds (`FlowFeature.java`);
 
 ### Changed
-- Feature 'Timestamp' to microseconds. Date Formatter removed (`BasicFlow.java`);
 - Feature 'Timestamp' renamed to 'Flow Start Time' (`BasicFlow.java`);
+- Dump features 'Flow Start Time' and 'Flow End Time' in microseconds. Date Formatter removed (`BasicFlow.java`);
