@@ -68,7 +68,7 @@ public class AboutDialog {
         baseBox.add(lblCpr);
         baseBox.add(Box.createVerticalStrut(5));
         
-        JLabel lblVersion = new JLabel("Version: 3.0");
+        JLabel lblVersion = new JLabel("Version: 4.0");
         lblVersion.setForeground(Color.GRAY);
         lblVersion.setAlignmentX(Component.CENTER_ALIGNMENT);
         baseBox.add(lblVersion);
